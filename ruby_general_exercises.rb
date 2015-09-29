@@ -15,8 +15,8 @@ puts "Hello again!"
 multiline_string = """
 In a galaxy far, far away...
 
-Some crazy shit was happening, and,
-let me tell you kid,
+Some crazy shit was happening and,
+let me tell you, kid,
 you were involved.
 
 There was a princess in a slave dress,
