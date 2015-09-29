@@ -1,0 +1,3 @@
+# all these commands are executed within the pry shell
+
+# ls <object> displays which methods are available to the object
