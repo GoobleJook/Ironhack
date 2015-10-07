@@ -54,3 +54,11 @@ name = gets.chomp
 IO.write('name.txt', name) # IO.write is a function that takes two arguments (name of 
 	#to be created, and content of that file)
 
+# .methods.sort returns availabile methods for object
+"a string".methods.sort
+x = "a string"
+x.methods.sort
+
+# show-doc shows documentation about a method
+show-doc "a string".upcase
+
