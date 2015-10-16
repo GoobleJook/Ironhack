@@ -1,5 +1,5 @@
 p {
-	background-color: grey;
+	background-color: gray;
 }
 
 header {
@@ -8,4 +8,8 @@ header {
 
 article {
 	font-family: sans-serif;
+}
+
+div {
+	background-color: white;
 }

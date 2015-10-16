@@ -49,7 +49,6 @@ class App
 	end
 
 	def compare(other_app)
-		binding.pry
 		if @pts > other_app.pts
 		    puts "#{@app} is better than #{other_app.app}"	
 		else
