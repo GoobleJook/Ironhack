@@ -13,10 +13,8 @@ def word_sort(sentence)
 	sentence.delete! ".?!;,"
 	words = sentence.split
 	words.sort_by!{ |word| word.downcase}
-	return words
 end
 
 sent = "This is a sentence. It has words and punctuation."
 
-word_sort(sent)
-puts words
+puts word_sort(sent)
