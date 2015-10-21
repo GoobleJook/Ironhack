@@ -60,15 +60,20 @@ class Car
 		@cities_visited = []
 	end
 
+	
+	# def cities_visited
+	# 	@cities_visited
+	# end
+
 	def park(city)
 		puts "You stopped in #{city}!"
 		@cities_visited.push(city)
 	end
 
 #makes a method with the name of the desired return value
-	def cities_visited
-		@cities_visited
-	end
+	# def cities_visited
+	# 	@cities_visited
+	# end
 
 
 	def sound
