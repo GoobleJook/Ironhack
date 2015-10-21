@@ -1,0 +1,3 @@
+# Set up remote repository
+# 1. Have a Github account (or BitBucket)
+#  
