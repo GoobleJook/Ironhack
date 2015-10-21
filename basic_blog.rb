@@ -38,8 +38,8 @@
 # **************
 # Post 3 text
 # ----------------
+require 'date'
 
-require 'pry'
 
 class Blog
 	def initialize
@@ -54,8 +54,9 @@ class Blog
 	def publish_front_page
 		@posts.sort! {|post1, post2| post2.date<=>post1.date } 
 		@posts.each {|post|
-			puts "#{post.title}, written on #{post.date}"
-			puts "**************"
+			puts "#{post.title},"
+			puts "*" * post.title.length
+			puts "written on #{post.date}."
 			puts "#{post.text}"
 			puts "--------------------"
 		}
@@ -82,14 +83,14 @@ class Sponsored_post
 	end
 end
 
-Oct20 = Post.new("10/20/15","Stuff","This is something I wrote about stuff.") 
-Oct21 = Post.new("10/21/15","Things","This is something I wrote about some things.")
+Oct20 = Post.new(Date.today,"Stuff","This is something I wrote about stuff.") # setting it to a variable keeps it shorter and makes it reusable -- ***PREFERRED***
+Oct21 = Post.new(Date.today,"Things","This is something I wrote about some things.")
 
 blog = Blog.new
 blog.add_post(Oct21)
 blog.add_post(Oct20)
-blog.add_post Post.new("10/22/15", "Shit", "Shit and stuff. I like metal music") 
-blog.add_post Sponsored_post.new("10/23/15","I have sold out","They pay me well!")
+blog.add_post Post.new(Date.today, "Shit", "Shit and stuff. I like metal music") 
+blog.add_post Sponsored_post.new(Date.today,"I have sold out","They pay me well!")
 blog.publish_front_page
 
 # Bonus blog
