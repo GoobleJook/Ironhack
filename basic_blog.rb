@@ -39,7 +39,7 @@
 # Post 3 text
 # ----------------
 require 'date'
-
+require 'pry'
 
 class Blog
 	def initialize
@@ -74,7 +74,7 @@ class Post
 	end
 end
 
-class Sponsored_post
+class Sponsored_post < Post
 	attr_accessor :title, :date, :text
 	def initialize(date, title, text)
 		@title = "******" + title + "******"
@@ -93,6 +93,7 @@ blog.add_post Post.new(Date.today, "Shit", "Shit and stuff. I like metal music")
 blog.add_post Sponsored_post.new(Date.today,"I have sold out","They pay me well!")
 blog.publish_front_page
 
+binding.pry
 # Bonus blog
 
 # Your blog looks amazing! but we need to improve it a little bit. A blog can have hundreds of posts, and sometimes it can be chaotic to find one. So we need to organize them, and nothing better than pagination. In this new version of the blog, we want that it only shows three posts per page, and at the the bottom, we would like to show the number of pages that it has and it will be very cool if the current page is shown in a different colour (you can use the colorize gem). To change from one page to another, the user should respond with either next or prev(previous).
