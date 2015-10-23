@@ -68,8 +68,8 @@ class Pawn < Piece
 		return false if (
 			(@x - new_x).abs > 0 ||
 			(@y - new_y).abs > 2 ||
-			@color == "black" && @y - new_y > 0 ||
-			@color == "white" && @y - new_y < 0
+			(@color == "black" && @y - new_y < 0) ||
+			(@color == "white" && @y - new_y > 0)
 			)
 		true
 	end
@@ -100,10 +100,10 @@ wr1 = Rook.new(1, 1, "white")
 wr2 = Rook.new(8, 1, "white")
 wk1 = Knight.new(2, 1, "white")
 wk2 = Knight.new(7, 1, "white")
-wb1 = Bishop.new(1, 3, "white")
-wb2 = Bishop.new(1, 6, "white")
-wq = Queen.new(1, 4, "white")
-wk = King.new(1, 5, "white")
+wb1 = Bishop.new(3, 1, "white")
+wb2 = Bishop.new(6, 1, "white")
+wq = Queen.new(4, 1, "white")
+wk = King.new(5, 1, "white")
 wp1 = Pawn.new(1, 2, "white")
 wp2 = Pawn.new(2, 2, "white")
 wp3 = Pawn.new(3, 2, "white")
@@ -169,10 +169,99 @@ if  #king
 	bk.move(5, 7) == true &&
 	bk.move(5, 6) == false &&
 	bk.move(3, 7) == false  
-	then puts "Black king: PASS"
-	puts "\n\nALL TESTS PASS!!!" 
+	then puts "Black king: PASS" 
 else
 	puts "Black king: FAIL"
+	puts "Exiting tests"
+	abort
+end
+
+if  #pawn
+	bp2.move(2, 5) == true &&
+	bp6.move(6, 6) == true &&
+	bp3.move(4, 6) == false &&
+	bp5.move(4, 6) == false  
+	then puts "Black pawns: PASS"
+	puts "\n\nALL BLACK TESTS PASS!!!\n\n" 
+else
+	puts "Black pawns: FAIL"
+	puts "Exiting tests"
+	abort
+end
+
+# ======= white team tests =====
+puts "WHITE TEAM TESTS FOLLOW:"
+
+if  #rooks
+	wr1.move(1, 6) == true &&
+	wr2.move(4, 1) == true &&
+	wr1.move(2, 2) == false &&
+	wr2.move(7, 2) == false  
+	then puts "White rooks: PASS" 
+else
+	puts "White rooks: FAIL"
+	puts "Exiting tests"
+	abort
+end
+
+if  #knights
+	wk1.move(4, 2) == true &&
+	wk2.move(5, 2) == true &&
+	wk1.move(3, 2) == false &&
+	wk2.move(6, 5) == false  
+	then puts "White knights: PASS" 
+else
+	puts "White knights: FAIL"
+	puts "Exiting tests"
+	abort
+end
+
+if  #bishops
+	wb1.move(1, 3) == true &&
+	wb2.move(8, 3) == true &&
+	wb1.move(6, 1) == false &&
+	wb2.move(3, 5) == false  
+	then puts "White bishops: PASS" 
+else
+	puts "White bishops: FAIL"
+	puts "Exiting tests"
+	abort
+end
+
+if  #queen
+	wq.move(4, 4) == true &&
+	wq.move(6, 3) == true &&
+	wq.move(3, 6) == false &&
+	wq.move(5, 3) == false  
+	then puts "White queen: PASS" 
+else
+	puts "White queen: FAIL"
+	puts "Exiting tests"
+	abort
+end
+
+if  #king
+	wk.move(5, 2) == true &&
+	wk.move(6, 1) == true &&
+	wk.move(5, 3) == false &&
+	wk.move(2, 7) == false  
+	then puts "White king: PASS" 
+else
+	puts "White king: FAIL"
+	puts "Exiting tests"
+	abort
+end
+
+if  #pawn
+	bp2.move(2, 5) == true &&
+	bp6.move(6, 6) == true &&
+	bp3.move(4, 6) == false &&
+	bp5.move(4, 6) == false  
+	then puts "White pawns: PASS"
+	puts "\n\nALL TESTS PASS!!!"
+	puts "\n\n\n\nYOU ARE A ROCKSTAR!!!" 
+else
+	puts "White pawns: FAIL"
 	puts "Exiting tests"
 	abort
 end
