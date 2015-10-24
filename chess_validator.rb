@@ -34,11 +34,9 @@ end
 
 class Bishop < Piece
 	def move (new_x, new_y) #valid moves 
-		if (@y - new_y).abs == (@x - new_x).abs
-			true
-		else
+		return true if (@y - new_y).abs == (@x - new_x).abs
 			false
-		end
+	
 	end
 end
 
