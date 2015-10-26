@@ -16,8 +16,6 @@ class String_calc
 		elsif @num_array.length > 1
 			@num_array.each { | num | @sum += num.to_i }
 			return @sum
-		else
-			return "NOT A VALID ARGUMENT, BUDDY!"
 		end
 	end
 end
@@ -37,3 +35,28 @@ else
 end
 
 system("git status")
+
+# RSpec.describe "String calculator" do 
+# 	it "returns 0 for the empty string" do
+# 		expect(StringCalc.new.add("")).to eq(0)
+# 	end
+
+# it "returns 3 for only that number" do
+# 	expect(StringCalc.new.add(input)).to eq(0)
+# end
+
+# iteration #3 
+# use Rspec to test, and change separator to '\n' from ','
+
+
+# ================ this is the key here ===========
+
+# require("./string_calculator.rb")
+
+# Rspec.describe "String calculator" do 
+# 	it "returns 0 for empty string" do
+# 		calc = StringCalculator.new
+
+# 		expect( calc.add("") ).to eq ( 0 )
+# 	end
+# end
