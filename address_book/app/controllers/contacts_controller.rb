@@ -7,6 +7,14 @@ class ContactsController < ApplicationController
 	end
 
 	def create
-		render(:text => "This route is contacts#create.")
+		contact = Contact.new(
+			:name => params[:contact][:name],
+			:address => params[:contact][:address],
+			:phone => params[:contact][:phone],
+			:email => params[:contact][:email])
+
+		contact.save
+
+		redirect_to("/contacts")
 	end
 end
