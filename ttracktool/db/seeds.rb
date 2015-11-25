@@ -6,6 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Project.create name: 'TeamTreehouse', description: 'finish Ruby track and others'
+Project.create name: 'sit-ups', description: 'Do 200 a day'
 
-Project.create name: 'Make wife happy', description: 'This is your highest priority'
+Project.create name: 'push-ups', description: '400 a day'
