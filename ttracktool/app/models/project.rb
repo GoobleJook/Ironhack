@@ -4,6 +4,6 @@ class Project < ActiveRecord::Base
 	end
 
 	def self.last_created_projects(limit)
-		@projects = Project.order(created_at: :desc).limit(10)
+		@projects = Project.order(created_at: :desc).limit(limit)
 	end
 end
