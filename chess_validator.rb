@@ -1,5 +1,40 @@
 require 'pry'
 
+### attributes
+		#positions	
+		#pieces at positions
+		#boundaries
+
+	### methods
+		# Rules
+		# turns
+		# Taking pieces
+
+class Game
+	def initialize
+		@board = {
+			a1: Rook.new(1,1, "white"), 
+			:a2 => Pawn.new(1,2,"white"),
+			:b1 => Knight.new(3,1,"white"),
+			a3: nil
+		}
+	end
+
+	def on_board?(start_position, end_position)
+		if @board.has_key?(start_position.to_sym) && @board.has_key?(end_position.to_sym)
+	end
+
+
+	def valid_move?(start_position, end_position)
+		#check to see if start position is on board -- Use .has_key? 
+		# check to see if end position is on the board
+		# if the piece at the start position can move in the way asked
+		puts "The position exists" if on_board(start,end_position)	
+	end
+end
+
+	
+
 class Piece #master piece
 	def initialize (x, y, color)
 		@x = x
@@ -264,3 +299,5 @@ else
 	abort
 end
 
+game = Game.new
+game.valid_move?("a2", "a3")
